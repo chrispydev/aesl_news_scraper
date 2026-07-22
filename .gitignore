@@ -1,0 +1,103 @@
+# =========================
+# Python
+# =========================
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build files
+build/
+develop-eggs/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Scraper Generated Files
+# =========================
+
+# Generated output files
+output/*.json
+
+# Split/generated article files
+output/split_articles/
+
+# Temporary scraper data
+output/news_articles/
+output/manual_articles/
+
+# =========================
+# Downloaded Images
+# =========================
+
+output/images/
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+# =========================
+# Temporary Files
+# =========================
+
+*.tmp
+*.temp
+.cache/
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Testing
+# =========================
+
+.coverage
+.pytest_cache/
+
+# =========================
+# Django Related (if used locally)
+# =========================
+
+db.sqlite3
+media/
+staticfiles/
