@@ -1,7 +1,6 @@
 import json
 import re
 
-
 INPUT_FILE = "/home/seer/aesl_news_scraper/output/all_news.json"
 OUTPUT_FILE = "/home/seer/aesl_news_scraper/output/news_updated.json"
 
@@ -11,7 +10,6 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
 
 
 for article in articles:
-
     content = article.get("content", "")
     source_url = article.get("source_url")
 
@@ -20,10 +18,7 @@ for article in articles:
 
     # Remove existing Source paragraph
     content = re.sub(
-        r'<p><strong>Source:</strong>.*?</p>',
-        '',
-        content,
-        flags=re.DOTALL
+        r"<p><strong>Source:</strong>.*?</p>", "", content, flags=re.DOTALL
     )
 
     # Add new source link
@@ -40,12 +35,7 @@ for article in articles:
 
 
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(
-        articles,
-        f,
-        indent=4,
-        ensure_ascii=False
-    )
+    json.dump(articles, f, indent=4, ensure_ascii=False)
 
 
 print("Source URLs updated successfully")
